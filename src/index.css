@@ -13,12 +13,22 @@
     border-color: rgba(237, 242, 247, var(--tw-border-opacity));
   }
   body {
-    @apply bg-gray-100;
+   background-image: url("./assets/strongpassword.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  }
+  /* .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  padding: 10px
   }
 }
 .gallery::-webkit-scrollbar {
   display: none;
-}
+} */
 /* 
 https://www.themoviedb.org/
 https://www.jumia.ug/
@@ -40,3 +50,5 @@ https://www.imdb.com/?ref_=nv_home
 
 https://www.themoviedb.org/*/
 /* https://www.mukuru.com/sz/ */
+
+}

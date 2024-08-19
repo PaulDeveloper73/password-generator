@@ -37,19 +37,19 @@ const PasswordGenenrator = () => {
     setPassword(newPassword);
   };
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen space-y-10 bg-slate-200">
+    <div className="flex flex-col items-center justify-center min-h-screen space-y-10 bg-opacity-60 bg-slate-900">
       <FontAwesomeIcon
         icon={faLock}
         className="text-blue-400 animate-pulse size-16"
       />
-      <h1 className="text-4xl text-center text-slate-700 font-extralight">
+      <h1 className="text-4xl text-center text-slate-300 font-extralight">
         Encrypt Information With A
-        <span className="font-bold text-blue-500"> Strong Password!</span>
+        <span className="font-bold text-blue-400"> Strong Password!</span>
         {password && (
           <p
             title="Clik to copy Password to clipboard"
             onClick={handleCopyPassword}
-            className="p-2 mt-10 font-light text-green-700 cursor-pointer bg-slate-100"
+            className="p-2 mt-10 font-normal bg-opacity-25 rounded-md cursor-pointer text-slate-200 bg-slate-100"
           >
             {password}
           </p>
@@ -57,8 +57,8 @@ const PasswordGenenrator = () => {
       </h1>
       <section className="space-y-6 text-center">
         <div>
-          <h3 className="text-2xl font-bold">Generate</h3>
-          <p>Random Password</p>
+          <h3 className="text-2xl font-bold text-slate-200">Generate</h3>
+          <p className="text-slate-400">Random Password</p>
         </div>
         <div className="space-y-6">
           <div className="relative">
