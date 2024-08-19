@@ -4,18 +4,30 @@ import { useState, useRef } from "react";
 
 const PasswordGenenrator = () => {
   const [password, setPassword] = useState(null);
-  //   const [copStatus, setCopyStatus] = useState(false);
+  const [copStatus, setCopyStatus] = useState(false);
   const passwordRef = useRef();
-  const handleCopyPassword = () => {
-    passwordRef.current.select();
-    document.execCommand("copy");
-    alert("Password coppied to clipbord");
+
+  const handleCopyPassword = async () => {
+    if (passwordRef.current) {
+      try {
+        await navigator.clipboard.writeText(passwordRef.current.value);
+        await handleAlert();
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    }
   };
   //   +Zv6xZbjPq>r !Ir7Alˆ9#%O` ?Uk2gckZ'W:+ <Px0S.N$t?|< $Yl2lNyUpbw5
   // responsinator.com -> check the responsiveness of your site.
   // projects to build
   // quiz app, gallery app, ecommerce landing page,password generator app
-  const handleGeneratePassword = () => {
+  const handleAlert = async () => {
+    setCopyStatus(true);
+    setTimeout(() => {
+      setCopyStatus(false);
+    }, 3000);
+  };
+  const handleGeneratePassword = async () => {
     let newPassword = "";
     const passLength = 12;
     const passSymbols = "±!@#$%ˆ&*()_+?><,.:';[]{}`|";
@@ -45,11 +57,19 @@ const PasswordGenenrator = () => {
       <h1 className="text-4xl text-center text-slate-200 font-extralight">
         Encrypt Information With A
         <span className="font-bold text-blue-400"> Strong Password!</span>
+        {copStatus && (
+          <span>
+            <br></br>
+            <span className="text-yellow-300 text-sm">
+              Copied to clipboard!
+            </span>
+          </span>
+        )}
         {password && (
           <p
             title="Clik to copy Password to clipboard"
             onClick={handleCopyPassword}
-            className="p-2 mt-10 font-normal bg-opacity-25 rounded-md cursor-pointer text-slate-200 bg-slate-100"
+            className="p-2 mt-6 font-normal bg-opacity-25 rounded-md cursor-pointer text-slate-200 bg-slate-100"
           >
             {password}
           </p>
