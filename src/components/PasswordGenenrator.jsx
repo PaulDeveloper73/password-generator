@@ -95,9 +95,9 @@ const PasswordGenenrator = () => {
               <span
                 onClick={handleCopyPassword}
                 title="Copy Password to clipboard"
-                className="absolute text-blue-500 cursor-pointer right-5 hover:text-blue-600 top-2/4 -translate-y-2/4"
+                className="absolute text-blue-400 cursor-pointer right-5 hover:text-blue-600 top-2/4 -translate-y-2/4"
               >
-                <FontAwesomeIcon icon={faCopy} />
+                <FontAwesomeIcon icon={faCopy} className="size-[24px]" />
               </span>
             )}
           </div>
