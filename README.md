@@ -13,6 +13,7 @@ This app helps you to generate strong passwords to secure  data  from hackers.
 - React
 - Vite
 - Tailwind CSS
+- App link here: https://secure-password-generator-pro.netlify.app/
 
 
 
