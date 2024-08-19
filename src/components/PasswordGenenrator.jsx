@@ -68,6 +68,7 @@ const PasswordGenenrator = () => {
               placeholder="xxxxxxxxxxxx"
               value={password}
               ref={passwordRef}
+              readOnly
               onChange={(e) => setPassword(e.target.value)}
             />
             {password && (
