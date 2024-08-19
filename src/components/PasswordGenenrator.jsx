@@ -42,7 +42,7 @@ const PasswordGenenrator = () => {
         icon={faLock}
         className="text-blue-400 animate-pulse size-16"
       />
-      <h1 className="text-4xl text-center text-slate-300 font-extralight">
+      <h1 className="text-4xl text-center text-slate-200 font-extralight">
         Encrypt Information With A
         <span className="font-bold text-blue-400"> Strong Password!</span>
         {password && (
