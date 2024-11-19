@@ -60,7 +60,7 @@ const PasswordGenenrator = () => {
         {copStatus && (
           <span>
             <br></br>
-            <span className="text-yellow-300 text-sm">
+            <span className="text-sm text-yellow-300">
               Copied to clipboard!
             </span>
           </span>
@@ -84,7 +84,7 @@ const PasswordGenenrator = () => {
           <div className="relative">
             <input
               type="text"
-              className="w-full shadow-xs focus:ring-2 focus:ring-blue-400 outline-none text-base placeholder:text-sm px-5 h-[46px] rounded-[10px] border-none pr-14"
+              className="w-full shadow-xs focus:ring-1 focus:ring-blue-400 outline-none text-base placeholder:text-sm px-5 h-[46px] rounded-[10px] border-none pr-14"
               placeholder="xxxxxxxxxxxx"
               value={password}
               ref={passwordRef}
