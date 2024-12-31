@@ -105,7 +105,7 @@ const PasswordGenenrator = () => {
             onClick={handleGeneratePassword}
             className="flex items-center text-lg justify-center px-20 w-full py-4 font-sans font-semibold tracking-wide text-white bg-blue-500 hover:bg-blue-600 rounded-lg h-[60px]"
           >
-            Generate Now!
+            Generate
           </button>
         </div>
       </section>
